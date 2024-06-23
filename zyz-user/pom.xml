@@ -8,10 +8,11 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>zyz-auth</artifactId>
-    <version>${org.zyz.auth.version}</version>
-    <name>zyz-auth</name>
-    <description>zyz-auth</description>
+    <artifactId>zyz-user</artifactId>
+    <version>${org.zyz.user.version}</version>
+    <name>zyz-user</name>
+    <description>zyz-user</description>
+    <url/>
     <properties>
         <java.version>${java.version}</java.version>
     </properties>
@@ -20,30 +21,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- MySQL -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!--项目核心库-->
         <dependency>
             <groupId>org.zyz</groupId>
             <artifactId>zyz-core</artifactId>
             <version>${org.zyz.core.version}</version>
         </dependency>
-        <!--token库-->
         <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
