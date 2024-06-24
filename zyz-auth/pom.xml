@@ -12,9 +12,6 @@
     <version>${org.zyz.auth.version}</version>
     <name>zyz-auth</name>
     <description>zyz-auth</description>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

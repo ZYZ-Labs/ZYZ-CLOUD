@@ -12,10 +12,6 @@
     <version>${org.zyz.user.version}</version>
     <name>zyz-user</name>
     <description>zyz-user</description>
-    <url/>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
