@@ -14,7 +14,7 @@
     <description>zyz-user</description>
     <url/>
     <properties>
-        <java.version>${java.version}</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
