@@ -2,6 +2,7 @@ package org.zyz.core.utils;
 
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -20,5 +21,18 @@ public class FileUtils {
         }catch (IOException e){
             return "";
         }
+    }
+
+    /**
+     * 如果存在则删除
+     * @param filePath
+     */
+    public static boolean deleteIfExist(String filePath){
+        File file = new File(filePath);
+        boolean isDelete = false;
+        if(file.exists()){
+            isDelete = file.delete();
+        }
+        return isDelete;
     }
 }
