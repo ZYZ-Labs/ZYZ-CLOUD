@@ -1,0 +1,6 @@
+#监听端口
+server:
+  port: 8101
+spring:
+  profiles:
+    active: dev

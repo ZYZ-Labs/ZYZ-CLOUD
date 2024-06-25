@@ -31,8 +31,8 @@
         <org.zyz.user.version>1.0.0</org.zyz.user.version>
         <alibaba.cloud.version>2022.0.0.0</alibaba.cloud.version>
         <alibaba.nacos.version>2.3.1</alibaba.nacos.version>
-
     </properties>
+
     <modules>
         <module>zyz-auth</module>
         <module>zyz-core</module>
@@ -72,8 +72,6 @@
         </dependencies>
     </dependencyManagement>
 
-
-
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -83,7 +81,7 @@
     </dependencies>
 
     <build>
-        <finalName>${project.name}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -111,6 +109,14 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                        <finalName>${project.artifactId}-${project.version}</finalName>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
