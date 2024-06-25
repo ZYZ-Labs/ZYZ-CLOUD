@@ -1,4 +1,4 @@
-package org.zyz.core.utils;
+package org.zyz.core.util;
 
 import org.springframework.core.io.ClassPathResource;
 
