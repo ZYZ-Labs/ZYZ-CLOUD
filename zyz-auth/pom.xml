@@ -34,7 +34,6 @@
         <dependency>
             <groupId>org.zyz</groupId>
             <artifactId>zyz-core</artifactId>
-            <version>${org.zyz.core.version}</version>
         </dependency>
         <!--token库-->
         <dependency>
