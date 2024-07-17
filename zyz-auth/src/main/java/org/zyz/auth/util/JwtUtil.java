@@ -5,11 +5,12 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
 
+import java.util.Base64;
 import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private final String secretKey = "";
+    private final String secretKey = "111112312313";
     /**
      * 超时时间
      */
@@ -29,18 +30,19 @@ public class JwtUtil {
                 .setClaims(claims)
                 .setIssuedAt(now)
                 .setExpiration(validity)
-                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .signWith(SignatureAlgorithm.HS256, Base64.getEncoder().encodeToString(secretKey.getBytes()))
                 .compact();
     }
 
     /**
      * 校验token
+     *
      * @param token
      * @return
      */
     public Boolean validateToken(String token) {
         try {
-            Jwts.parser().setSigningKey(secretKey).parseClaimsJwt(token);
+            Jwts.parser().setSigningKey(Base64.getEncoder().encodeToString(secretKey.getBytes())).parseClaimsJwt(token);
             return true;
         } catch (Exception e) {
             return false;

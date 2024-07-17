@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.zyz.auth.dto.RequestTokenDto;
+import org.zyz.auth.dto.VerifyTokenDto;
 import org.zyz.auth.service.AuthService;
 import org.zyz.auth.vo.AuthResponse;
 import org.zyz.core.vo.ResultVo;
@@ -18,22 +20,22 @@ public class AuthController {
 
     /**
      * 获取token
-     * @param userId
+     * @param requestTokenDto
      * @return
      */
     @PostMapping("/token")
-    public ResultVo<AuthResponse> generateToken(@RequestBody Long userId){
-        String token = authService.generateToken(userId);
+    public ResultVo<AuthResponse> generateToken(@RequestBody RequestTokenDto requestTokenDto){
+        String token = authService.generateToken(requestTokenDto.getUserId());
         return ResultVo.OK(new AuthResponse(token));
     }
 
     /**
      * 验证token
-     * @param token
+     * @param verifyTokenDto
      * @return
      */
     @PostMapping("/verify")
-    public ResultVo<Boolean> verifyToken(@RequestBody String token){
-        return ResultVo.OK(authService.verifyToken(token));
+    public ResultVo<Boolean> verifyToken(@RequestBody VerifyTokenDto verifyTokenDto){
+        return ResultVo.OK(authService.verifyToken(verifyTokenDto.getToken()));
     }
 }
