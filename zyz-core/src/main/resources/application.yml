@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: zyz-core
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ZYZ-Labs
+      timeout: 6000
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
+# MyBatis ????
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml       # MyBatis ? Mapper XML ????
+  type-aliases-package: org.zyz.core.entity       # ??????????????
+logging:
+  level:
+    root: INFO         # ??????
+    org.zyz: DEBUG     # ????????????????? DEBUG
+  file:
+    path: ./logs       # ?????????
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
