@@ -4,3 +4,11 @@ server:
 spring:
   profiles:
     active: dev
+  cloud:
+    consul:
+      host: localhost # Consul 服务器的地址
+      port: 40001      # Consul 的端口
+      discovery:
+        service-name: zyz-user # 注册到 Consul 的服务名称
+        health-check-path: /health # 健康检查的 URL
+        health-check-interval: 10s # 健康检查的间隔时间

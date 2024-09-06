@@ -4,3 +4,14 @@ spring:
     url: jdbc:mysql://localhost:3306/zyz-cloud
     username: zyz_cloud
     password: zyz_cloud
+  # Spring Security OAuth2 配置
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8100/auth  # JWT 认证服务器的 URI
+
+# 日志配置
+logging:
+  level:
+    org.springframework: DEBUG  # 设置 Spring 日志级别为 INFO
