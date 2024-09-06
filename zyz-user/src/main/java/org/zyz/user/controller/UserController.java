@@ -58,18 +58,4 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseResult.success("用户删除成功");
     }
-
-    // 忘记密码，发送重置密码邮件
-    @PostMapping("/forgot-password")
-    public ResponseResult<String> forgotPassword(@RequestParam String email) {
-        userService.sendResetPasswordEmail(email);
-        return ResponseResult.success("重置密码邮件已发送");
-    }
-
-    // 重置密码
-    @PostMapping("/reset-password")
-    public ResponseResult<String> resetPassword(@RequestParam String token, @RequestParam String newPassword) {
-        userService.resetPassword(token, newPassword);
-        return ResponseResult.success("密码重置成功");
-    }
 }
