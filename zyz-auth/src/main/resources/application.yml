@@ -3,7 +3,7 @@ server:
   port: 8100
 spring:
   profiles:
-    active: dev
+    active: prod
   application:
     name: zyz-auth
   cloud:
