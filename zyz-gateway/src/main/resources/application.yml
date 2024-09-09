@@ -1,9 +1,7 @@
-#监听端口
 server:
   port: 8082
+
 spring:
-  profiles:
-    active: prod
   application:
     name: zyz-gateway
   main:
@@ -34,3 +32,11 @@ spring:
             - Path=/auth/**
           filters:
             - StripPrefix=1
+
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
