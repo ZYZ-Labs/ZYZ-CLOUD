@@ -9,7 +9,7 @@
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <artifactId>zyz-user</artifactId>
-    <version>1.0.0</version>
+    <version>${org.zyz.user.version}</version>
     <name>zyz-user</name>
     <description>zyz-user</description>
     <dependencies>

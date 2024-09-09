@@ -8,21 +8,14 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>zyz-gateway</artifactId>
-    <version>${org.zyz.gateway.version}</version>
-    <name>zyz-gateway</name>
-    <description>zyz-gateway</description>
+    <artifactId>zyz-common-interface</artifactId>
+    <version>${org.zyz.common.interface.version}</version>
+    <name>zyz-common-interface</name>
+    <description>zyz-common-interface</description>
     <dependencies>
-
-        <!--项目核心库-->
         <dependency>
-            <groupId>org.zyz</groupId>
-            <artifactId>zyz-core</artifactId>
-        </dependency>
-        <!--gateway网关-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -31,14 +24,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

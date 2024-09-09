@@ -25,6 +25,9 @@
         <org.zyz.core.version>1.0.0</org.zyz.core.version>
         <org.zyz.auth.version>1.0.0</org.zyz.auth.version>
         <org.zyz.user.version>1.0.0</org.zyz.user.version>
+        <org.zyz.gateway.version>1.0.0</org.zyz.gateway.version>
+        <org.zyz.common.interface.version>1.0.0</org.zyz.common.interface.version>
+        <dubbo.version>3.3.0-beta.5</dubbo.version>
     </properties>
 
     <modules>
@@ -32,6 +35,7 @@
         <module>zyz-core</module>
         <module>zyz-user</module>
         <module>zyz-gateway</module>
+        <module>zyz-common-interface</module>
     </modules>
 
     <dependencyManagement>
@@ -64,13 +68,31 @@
             </dependency>
             <dependency>
                 <groupId>org.zyz</groupId>
+                <artifactId>zyz-user</artifactId>
+                <version>${org.zyz.user.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zyz</groupId>
+                <artifactId>zyz-gateway</artifactId>
+                <version>${org.zyz.gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zyz</groupId>
                 <artifactId>zyz-core</artifactId>
                 <version>${org.zyz.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.zyz</groupId>
-                <artifactId>zyz-user</artifactId>
-                <version>${org.zyz.user.version}</version>
+                <artifactId>zyz-common-interface</artifactId>
+                <version>${org.zyz.common.interface.version}</version>
+            </dependency>
+            <!-- Dubbo -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

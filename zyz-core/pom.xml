@@ -9,10 +9,18 @@
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <artifactId>zyz-core</artifactId>
-    <version>1.0.0</version>
+    <version>${org.zyz.core.version}</version>
     <name>zyz-core</name>
     <description>zyz-core</description>
     <dependencies>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.zyz</groupId>
+            <artifactId>zyz-common-interface</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
