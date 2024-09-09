@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/zyz-cloud
+    url: jdbc:mysql://192.168.5.247:3306/zyz-cloud
     username: zyz_cloud
     password: zyz_cloud
 

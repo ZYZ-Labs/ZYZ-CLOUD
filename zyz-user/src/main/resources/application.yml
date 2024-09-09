@@ -8,7 +8,7 @@ spring:
     name: zyz-user
   cloud:
     consul:
-      host: 192.168.5.247
+      host: localhost
       port: 40001
       discovery:
         heartbeat:
