@@ -3,12 +3,12 @@ server:
   port: 8101
 spring:
   profiles:
-    active: prod
+    active: dev
   application:
     name: zyz-user
   cloud:
     consul:
-      host: localhost
+      host: 192.168.5.247
       port: 40001
       discovery:
         heartbeat:
