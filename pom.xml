@@ -31,6 +31,7 @@
         <module>zyz-auth</module>
         <module>zyz-core</module>
         <module>zyz-user</module>
+        <module>zyz-gateway</module>
     </modules>
 
     <dependencyManagement>
