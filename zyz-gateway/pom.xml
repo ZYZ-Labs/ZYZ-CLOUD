@@ -13,10 +13,6 @@
     <name>zyz-gateway</name>
     <description>zyz-gateway</description>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <!--项目核心库-->
         <dependency>
