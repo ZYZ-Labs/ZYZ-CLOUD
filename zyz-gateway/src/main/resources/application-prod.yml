@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zyz-cloud
+    username: zyz_cloud
+    password: zyz_cloud
+
+# 日志配置
+logging:
+  level:
+    org.springframework: DEBUG  # 设置 Spring 日志级别为 INFO
