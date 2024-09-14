@@ -16,6 +16,12 @@ spring:
       config:
         enabled: false
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://zyz-auth:8081  # 根据实际情况配置
+
 # Dubbo配置
 dubbo:
   application:

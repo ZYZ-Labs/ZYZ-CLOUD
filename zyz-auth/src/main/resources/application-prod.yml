@@ -28,6 +28,7 @@ dubbo:
   scan:
     base-packages: org.zyz.auth.service
 
+
 # 日志配置
 logging:
   level:
