@@ -11,14 +11,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - # Gateway 自身的健康检查路由
-        - id: gateway_health
-          uri: http://localhost:8082
-          predicates:
-            - Path=/health
-          filters:
-            - RewritePath=/health, /actuator/health
-
         - id: zyz-user
           uri: lb://zyz-user
           predicates:
