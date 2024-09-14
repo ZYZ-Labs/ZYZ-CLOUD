@@ -9,16 +9,6 @@ spring:
   main:
     web-application-type: reactive
   cloud:
-    consul:
-      host: localhost
-      port: 40001
-      discovery:
-        heartbeat:
-          enabled: true
-        health-check-path: /health
-        health-check-interval: 10
-      config:
-        enabled: false
     gateway:
       routes:
         - id: zyz-user

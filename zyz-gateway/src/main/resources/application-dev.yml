@@ -4,17 +4,7 @@ spring:
     url: jdbc:mysql://192.168.5.247:3306/zyz-cloud
     username: zyz_cloud
     password: zyz_cloud
-  cloud:
-    consul:
-      host: 192.168.5.247
-      port: 40001
-      discovery:
-        heartbeat:
-          enabled: true
-        health-check-path: /health
-        health-check-interval: 10
-      config:
-        enabled: false
+
 # 日志配置
 logging:
   level:

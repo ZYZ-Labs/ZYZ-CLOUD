@@ -4,6 +4,29 @@ spring:
     url: jdbc:mysql://localhost:3306/zyz-cloud
     username: zyz_cloud
     password: zyz_cloud
+  cloud:
+    consul:
+      host: localhost
+      port: 40001
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        health-check-interval: 10
+      config:
+        enabled: false
+
+# Dubbo配置
+dubbo:
+  application:
+    name: zyz-auth-service
+  registry:
+    address: consul://localhost:40001
+  protocol:
+    name: dubbo
+    port: 18100
+  scan:
+    base-packages: org.zyz.auth.service
 
 # 日志配置
 logging:
